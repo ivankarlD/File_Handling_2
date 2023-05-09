@@ -1,5 +1,4 @@
 class Reservation : 
-
     # constructor
     def __init__(self) :
         try:
@@ -106,7 +105,8 @@ class Reservation :
                 row_data = [data[0], data[2], data[3], data[1], data[4], data[5], data[6]]
                 # print the data
                 print("{:<5} {:<20} {:<20} {:<20} {:<20} {:<20} {:<20}".format(*row_data))
-
+                # collect all the numbers of adult and children in records
+                # add up the total sales of all the reservation
                 total_adults += int(data[5])
                 total_children += int(data[6]) if data[6] else 0
                 total_sales += float(data[6].replace('$',''))
@@ -124,7 +124,7 @@ class Reservation :
             # 1 children is equal to 250
             return adult * 500 + children * 250
     
-    #close the instance of class 
+    #close the instance of the class 
     def close(self):
         print('')
 
